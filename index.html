@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>Pitagorasz</title>
+   
+    <style>
+        body {
+          font-family: "Sofia", sans-serif;
+        }
+        </style>
+
+
+</head>
+<body>
+    
+    <h1 >Pitagorasz tétel számláló</h1>
+    <img src="asd.png" alt="HÁROMSZÖG">
+<div style="border: 2px solid red;  padding: 10px;
+border-radius: 50px 20px; padding-left: 100px;   width: 500px;">
+
+    
+    <p>Adj meg legalább két oldalt</p>
+    <form>
+        <p><input type="text" id="a" oninput="szam()"> a. oldal</p>
+        <p><input type="text" id="b" oninput="szam()"> b. oldal</p>
+        <p><input type="text" id="c" oninput="szam()"> c. oldal</p>
+    </form> 
+</div>
+
+<h1>A megadott paraméterek alapján rajzolt háromszög</h1>
+
+    <img src="images.png" alt="" style="width: 10%; height: 10% ;">
+
+    <script>
+        function szam() {
+            if (a.value != 0 && b.value != 0) {
+                c.value = Math.sqrt((a.value * a.value) + (b.value * b.value));
+            }
+            else if (a.value != 0 && c.value != 0) {
+                b.value = Math.sqrt((c.value * c.value)-(a.value * a.value));
+            }
+            else if (b.value != 0 && c.value != 0) {
+                a.value = Math.sqrt((c.value * c.value)-(b.value * b.value));
+            }
+        }
+        
+    </script>
+</body>
+</html>
